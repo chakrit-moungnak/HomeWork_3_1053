@@ -1,11 +1,12 @@
 ﻿class Program3_1 {
+    // ผมไม่รู้วิธีการทำให้เวลาใส่ R ตัวแรกแล้วโปรแกรมไม่เจ๊ง ถ้าอาจารย์อ่านโค้ดของผม ได้โปรดช่วยชี้แนะวิธีผ่านการคอมเม้นตอนบอกคะแนนด้วยนะะครับ
     static void Main(string[] args){
         Menu();
         ThorwFlower();
     }
 
     static void Menu(){
-        Console.WriteLine("Please input any flower.");
+        Console.WriteLine("Please input any flower or input another key to cancel.");
         Console.WriteLine("1. J for jasmine");
         Console.WriteLine("2. G for amaranth");
         Console.WriteLine("3. O for orchid");
@@ -15,7 +16,8 @@
 
     static void ThorwFlower(){
         CircularLinkedList<char> flowerlist = new CircularLinkedList<char>();
-        Console.Write("input flower: ");
+        Console.WriteLine("input flower. ");
+        Console.WriteLine("-------------------------------------------------------");
 
         while (true){
             flowerlist.Add(Char.Parse(Console.ReadLine()));
@@ -23,6 +25,9 @@
             && flowerlist.Get(flowerlist.GetLength()-1) != 'R' && flowerlist.Get(flowerlist.GetLength()-1) != 'X'){
                 flowerlist.Remove(flowerlist.GetLength()-1);
 
+                Console.WriteLine("");
+                Console.WriteLine("Total flower. ");
+                Console.WriteLine("-------------------------------------------------------");
                 for(int i = 0; i < flowerlist.GetLength(); i++){
                     Console.WriteLine(flowerlist.Get(i));
                 }
