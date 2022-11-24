@@ -1,5 +1,6 @@
 class Program3_2 {
-    // ผมไม่รู้วิธีการนำ pop มาใช้ครับ นำมาใช้แล้วโปรแกรมแตกเลย
+    // ผมไม่รู้วิธีการนำ pop มาใช้ครับ นำมาใช้แล้วโปรแกรมแตกเลย ถ้าอาจารย์อ่านโค้ดของผม ได้โปรดช่วยชี้แนะวิธีผ่านการคอมเม้นตอนบอกคะแนนด้วยนะะครับ
+    // ผมลองเก็บส่วนที่นำมาใช้สำหรับฟังก์ชั่น pop เอาไว้นะครับ เผื่อจะช่วยให้อาจารย์ระบุข้อผิดพลาดได้ง่ายขึ้น
     static void Main(string[] args){
         Menu();
         ThorwFruit();
@@ -50,6 +51,9 @@ class Program3_2 {
                     fruitlist.Push('3');
                 }
             }
+        Console.WriteLine("");
+        Console.WriteLine("Total fruit. ");
+        Console.WriteLine("-------------------------------------------------------");
         for (int i = 0; i < fruitlist.GetLength(); i++){
                     Console.Write(fruitlist.Get(i));
         }

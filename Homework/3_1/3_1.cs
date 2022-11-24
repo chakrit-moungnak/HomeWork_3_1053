@@ -54,7 +54,7 @@
             }
             if(flowerlist.Get(flowerlist.GetLength()-1) == 'X'){
                 flowerlist.Remove(flowerlist.GetLength() - 1);
-                flowerlist.Remove(flowerlist.GetLength() - 2);
+                flowerlist.Remove(flowerlist.GetLength() - 1);
             }
         }
     }
